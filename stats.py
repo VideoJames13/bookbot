@@ -13,3 +13,14 @@ def character_count(file_contents):
         else:
             char_count[f"{character}"] = 1
     return char_count
+
+def sort_on(dict):
+    return dict["num"]
+
+def list_sort(dictionary):
+    dict_list = []
+    for character in dictionary:
+        count = dictionary[character]
+        dict_list.append({"char":f"{character}", "num": count})
+        dict_list.sort(reverse=True, key=sort_on)
+    return dict_list
