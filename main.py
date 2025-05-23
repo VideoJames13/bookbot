@@ -9,9 +9,11 @@ from stats import character_count
 
 from stats import list_sort
 
+#fake comment for streak!
+
 def main():
     contents = get_book_text("./books/frankenstein.txt")
     print(f"{word_count(contents)} words found in the document")
-    print(list_sort(character_count(contents))\n)
+    print(list_sort(character_count(contents)))
 
 main()
