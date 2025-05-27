@@ -13,7 +13,12 @@ from stats import list_sort
 
 def main():
     contents = get_book_text("./books/frankenstein.txt")
-    print(f"{word_count(contents)} words found in the document")
-    print(list_sort(character_count(contents)))
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(f"Found {word_count(contents)} total words")
+    print("--------- Character Count -------")
+    for dict in list_sort(character_count(contents)):
+        print(f"{dict["char"]}: {dict["num"]}")
 
 main()
